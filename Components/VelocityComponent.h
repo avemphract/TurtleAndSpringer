@@ -10,6 +10,7 @@ namespace Components{
         float velX;
         float velY;
         float velA;
+        VelocityComponent* setComponent(float velX, float velY, float velA);
         int getComponentId();
         void resetComponent();
         VelocityComponent();

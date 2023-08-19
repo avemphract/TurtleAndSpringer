@@ -9,6 +9,7 @@ namespace Components{
             float posX;
             float posY;
             float angle;
+            TransformComponent* setComponent(float posX, float posY, float angle);
             int getComponentId();
             void resetComponent();
             TransformComponent();

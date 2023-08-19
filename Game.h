@@ -1,5 +1,6 @@
 #include <queue>
 #include <list>
+#include <stack>
 #include "Systems/System.h"
 
 #pragma once
@@ -11,6 +12,7 @@ private:
 	std::stack<Entity*> unusedEntities = std::stack<Entity*>();
 public:
 	ComponentManager componentManager;
+	bool isRunning = true;
 
 	void update(float deltaTime);
 	Entity* getAndRegisterEntity();

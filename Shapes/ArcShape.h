@@ -11,5 +11,5 @@ class ArcShape: public Shape{
         
         ArcShape();
         ArcShape(float cenX, float cenY, float startAngle, float lengthAngle, float radius);
-        ArcShape modifyTransform(Components::TransformComponent* transformComponent);
+        ArcShape* modifyTransform(Components::TransformComponent* transformComponent);
 };

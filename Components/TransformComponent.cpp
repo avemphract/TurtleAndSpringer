@@ -1,5 +1,13 @@
 #include "TransformComponent.h"
 
+Components::TransformComponent* Components::TransformComponent::setComponent(float posX, float posY, float angle)
+{
+	this->posX = posX;
+	this->posY = posY;
+	this->angle = angle;
+	return this;
+}
+
 int Components::TransformComponent::getComponentId()
 {
 	return TransformComponentId;

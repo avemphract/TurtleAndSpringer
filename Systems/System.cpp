@@ -8,6 +8,7 @@ System::System(int requiredComponents):requiredComponents{requiredComponents}
 
 void System::update(std::list<Entity*>& entities,  float deltaTime)
 {
+	beforeUpdate(entities);
 	for (Entity * ent : entities) {
 		if ((ent->getComponentsBit() & requiredComponents) == requiredComponents) {
 			update(ent, deltaTime);

@@ -1,5 +1,13 @@
 #include "VelocityComponent.h"
 
+Components::VelocityComponent* Components::VelocityComponent::setComponent(float velX, float velY, float velA)
+{
+	this->velX = velX;
+	this->velY = velY;
+	this->velA = velA;
+	return this;
+}
+
 int Components::VelocityComponent::getComponentId() {
 	return VelocityComponentId;
 }

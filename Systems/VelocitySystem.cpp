@@ -11,8 +11,8 @@ VelocitySystem::~VelocitySystem()
 
 void VelocitySystem::update(Entity* entity, float deltaTime)
 {
-	Components::TransformComponent* transfomComponent = entity->GetCompoenet<Components::TransformComponent>();
-	Components::VelocityComponent* velocityComponent = entity->GetCompoenet<Components::VelocityComponent>();
+	Components::TransformComponent* transfomComponent = entity->GetComponent<Components::TransformComponent>();
+	Components::VelocityComponent* velocityComponent = entity->GetComponent<Components::VelocityComponent>();
 
 	transfomComponent->posX += velocityComponent->velX * deltaTime;
 	transfomComponent->posY += velocityComponent->velY * deltaTime;

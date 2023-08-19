@@ -7,5 +7,5 @@ class PointShape: public Shape{
         float y;
         PointShape();
         PointShape(float x, float y);
-        PointShape modifyTransform(Components::TransformComponent* transformComponent);
+        PointShape* modifyTransform(Components::TransformComponent* transformComponent);
 };
