@@ -9,6 +9,11 @@ RectangleShape::RectangleShape(float x, float y, float width, float height): Sha
 {
 }
 
+RectangleShape::RectangleShape(RectangleShape* rec) : Shape(), x{ rec->x }, y{ rec->y }, width{ rec->width }, height{ rec->height }
+{
+
+}
+
 RectangleShape* RectangleShape::modifyTransform(Components::TransformComponent* transformComponent)
 {
 	return new RectangleShape(this->x + transformComponent->posX, this->y + transformComponent->posY, this->width, this->height);

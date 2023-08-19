@@ -28,11 +28,11 @@ int main(){
 
     Entity* springler = game.getAndRegisterEntity();
     springler->AddComponent(game.componentManager.GetComponent<Components::TransformComponent>()->setComponent(0,0,0));
+    turtle->AddComponent(game.componentManager.GetComponent<Components::VelocityComponent>()->setComponent(0, 0, 10));
     springler->AddComponent(game.componentManager.GetComponent<Components::ShapeComponent>()->setComponent(new ArcShape(0, 0, 0, M_PI/2, 10)));
     springler->AddComponent(game.componentManager.GetComponent<Components::SpringerComponent>());
 
-
-    float fixedDeltaTime = 1;
+    float fixedDeltaTime = 0.1;
     while (game.isRunning) {
         game.update(fixedDeltaTime);
     }
